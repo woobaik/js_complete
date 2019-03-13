@@ -1,3 +1,5 @@
 .color-picker {
+  text-align: center;
   background-color: rebeccapurple; 
+  background-image: linear-gradient( to right, red, yellow);
 }
