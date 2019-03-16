@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactDom from 'react-dom'
-
+import ReactDom from 'react-dom';
+import SearchBar from './components/SearchBar';
 
 
 const App = () => { 
     return(
         <div>
-            Hello
+            <SearchBar />
         </div>
     );
 }
