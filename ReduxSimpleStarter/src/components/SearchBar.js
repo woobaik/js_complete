@@ -7,10 +7,10 @@ class SearchBar extends Component {
             searchValue : ''
         }
     }
+    
     onInputChange(event) {
         this.setState({ searchValue : event.target.value })
         console.log(this.state.searchValue);
-        
     }
 
     render() {
