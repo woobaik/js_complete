@@ -3,7 +3,7 @@ import VideoListItem from './VideoListItem';
 
 const VideoList = () => {
     return(
-        <div>
+        <div className="col-md-4"> 
             videoListItem -text
             <VideoListItem />
         </div>

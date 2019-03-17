@@ -15,8 +15,12 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div>
-                <input type="search" value={this.state.searchValue} onChange={(event) => this.onInputChange(event)} />
+            <div className="col-md-12 custom-form form-group ">
+                <input type="search" 
+                       value={this.state.searchValue} 
+                       onChange={(event) => this.onInputChange(event)} 
+                       className="form-control"
+                       />
             </div>
             
         )       
