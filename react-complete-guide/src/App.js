@@ -1,31 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-import Person from './Person/Person';
+import Product from './Product/Product';
+import products from './Product/ProductData';
 
-class App extends Component {
-  state = {
-    people: [{ name: 'Haram', age: 29 }, { name: 'Joungwoo', age:33 }, { name: 'Kim', age: 40 }]
-  };
-
-  switchNameHander = () => {
-    this.setState({name: "Haram Kim!!@@!!"})
-  }
-    
-
-  render() {
-    const peopleGenerator = (
-      this.state.people.map((person, i) => {
-        return (<Person name={person.name} age={person.age} />)
-      })
-    );  
-
-    return (
-      <div className="App">
-        <button onClick={this.switchNameHander}>Change Name</button>
-          {peopleGenerator}
-      </div>
+const App = () => {
+  const productsData = products.map(item => {
+    return(
+    <Product
+      keys={item.id}
+      product={item}
+    />
     );
-  }
+  })
+
+
+  return (
+    <div>{productsData}</div>
+  )
 }
 
 export default App;

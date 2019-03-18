@@ -19,4 +19,6 @@ const products = [
       description: "Eiusmod id ad irure officia consequat.",
       price: 18319
     }
+];
 
+export default products
