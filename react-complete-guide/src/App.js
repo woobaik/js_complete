@@ -3,20 +3,23 @@ import './App.css';
 import Product from './Product/Product';
 import products from './Product/ProductData';
 
-const App = () => {
-  const productsData = products.map(item => {
+class App extends Component {
+
+  render() {
+    const productsData = products.map(item => {
+      return (
+        <Product
+          keys={item.id}
+          product={item}
+        />
+      );
+    })
+
     return(
-    <Product
-      keys={item.id}
-      product={item}
-    />
-    );
-  })
-
-
-  return (
-    <div>{productsData}</div>
-  )
+      <div>{productsData}</div>
+      
+    )
+  }
 }
 
 export default App;
