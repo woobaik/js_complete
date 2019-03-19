@@ -1,25 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
-import Product from './Product/Product';
-import products from './Product/ProductData';
+
 
 class App extends Component {
-
+  constructor() {
+    super()
+    this.state = { isLoggedIn: true}
+  }
   render() {
-    const productsData = products.map(item => {
-      return (
-        <Product
-          keys={item.id}
-          product={item}
-        />
-      );
-    })
-
     return(
-      <div>{productsData}</div>
-      
+      <div>
+        <h1>Your are currently logged in(yes/no)</h1>
+        <p>{this.state.isLoggedIn ? "Yes" : "No"}</p>
+      </div>
     )
   }
 }
-
 export default App;
