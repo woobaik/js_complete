@@ -1,32 +1,8 @@
-import * as types from '../actions/ActionTypes';
-
-
-
-const initialState = {
-    number: 0,
-    color: "black"
+const songReducer = () => {
+    return [
+        {title: 'No Women No Cry', duration: '7:16', artist: 'Bob Marley'},
+        {title: 'Gangnam Style', duration: '4.50', artist: 'Psy'},
+        {title: 'Zi Hago Sip Da', duration: '4:56', artist: 'Commander Zico'},
+        {title: 'All Star', duration: '4:12', artist: 'Norah Jones'}
+    ]
 }
-
-const counter = (state=initialState, action) => {
-    switch(action.type) {
-        case types.INCREMENT:
-            return {
-                ...state,
-                number: state.number + 1
-            };
-        case types.INCREMENT:
-            return {
-                ...state,
-                number: state.number - 1
-            };
-        case types.INCREMENT:
-            return {
-                ...state,
-                number: action.color
-            };
-        default: 
-            return state;
-    }
-}
-
-export default counter;

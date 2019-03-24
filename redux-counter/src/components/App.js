@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import Counter from './Counter';
+import { selectSong} from '../actions';
+
 
 class App extends Component {
     render() {
         return(
             <div>
-                <Counter />
+                APP
             </div>
         );
     }
