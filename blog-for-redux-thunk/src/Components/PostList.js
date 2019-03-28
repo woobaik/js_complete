@@ -5,10 +5,10 @@ import { fetchPost } from '../Actions';
 
 class PostList extends Component {
     componentDidMount() {
-        console.log(this.props)
         this.props.fetchPost()
     }
     render() {
+        console.log(this.props.posts)
         return(
             <div>Hi</div>
         )
@@ -16,7 +16,8 @@ class PostList extends Component {
 };
 
 const mapToStateToProps = (state) => {
-    return state
+    
+    return { posts: state.fectchPostList}
 }
 
 export default connect(mapToStateToProps, { fetchPost })(PostList)
